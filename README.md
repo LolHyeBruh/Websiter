@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YouTube-like OneDrive Video Player
 
-## Getting Started
+This app allows users to log in with their OneDrive account, select folders containing videos, and view them in YouTube-style playlists. Playlists are stored in Firebase, and the UI is themed red/black for a YouTube-like look.
 
-First, run the development server:
+## Features
+- OneDrive OAuth authentication
+- Video folder selection and access
+- YouTube-style playlists (stored in Firebase)
+- Video length and title display
+- Caching (server and client)
+- Responsive for mobile and desktop
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Setup
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Configure OneDrive and Firebase credentials in `.env.local`.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+Deploy to Vercel for best results.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
+- Theme colors: Red and black (YouTube style)
+- Playlist storage: Firebase collection `Onedrive-video-player`, document ID is OneDrive username, string stores video info.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
