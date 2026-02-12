@@ -15,6 +15,10 @@ export default function Home() {
 
   // OneDrive login handler
   const handleLogin = async () => {
+    if (!msalInstance) {
+      alert("OneDrive login is only available in the browser.");
+      return;
+    }
     try {
       const loginResponse = await msalInstance.loginPopup({
         scopes: ["Files.Read", "User.Read"],
