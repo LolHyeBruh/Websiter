@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { msalInstance } from "../onedriveAuth";
+import { useMsalInstance } from "../onedriveAuth";
 import { db } from "../firebase";
 import { collection, doc, getDoc, setDoc } from "firebase/firestore";
 
@@ -11,6 +11,7 @@ export default function Home() {
   const [user, setUser] = useState<any>(null);
   const [playlists, setPlaylists] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const msalInstance = useMsalInstance();
 
   // OneDrive login handler
   const handleLogin = async () => {
